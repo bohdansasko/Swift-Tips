@@ -29,10 +29,12 @@ final class HomeViewController {
   // ...
   override func viewDidLoad() {
       super.viewDidLoad()
-      
+                
       NotificationCenter.default.addObserver(
-          .userAuthorized,
-          #selector(handleUserAuthorized(_:))
+          self,
+          selector: #selector(handleUserAuthorized(_:)),
+          name: .userAuthorized,
+          object: nil
       )
 
       let user = STUser()
