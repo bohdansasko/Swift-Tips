@@ -40,7 +40,7 @@ final class HomeViewController {
       NotificationCenter.default.post(.userAuthorized, object: userAuthorized.makeDict())
   }
 
-  @objc func handleUserAuthorized(_ n: Notification) {
+  @objc private func handleUserAuthorized(_ n: Notification) {
       guard let authorizedNotification = STNUserAuthorizated(with: n) else {
           return
       }
