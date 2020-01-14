@@ -19,7 +19,7 @@ extension STNUserAuthorizated {
     } 
     
     func makeDict() -> [String: Any] {
-        return ["name": user]
+        return ["user": user]
     }
 
 }
